@@ -26,7 +26,7 @@ favorite-directories:cd() {
         read -r name maxdepth dir mindepth <<< "$source"
 
         if [ "$name" = "$token" ]; then
-            eval cd "$dir/$target_dir"
+            eval cd "'$dir/$target_dir'"
             break
         fi
     done
